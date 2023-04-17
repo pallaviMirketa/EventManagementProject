@@ -1,0 +1,61 @@
+<apex:page controller="NewRegistration" sidebar="false" showHeader="false">
+    <apex:form >
+        
+          
+        <apex:pageBlock >
+            
+              <!--Event Loactions-->  
+              <apex:pageBlockSection title="Location" collapsible="true" columns="2">
+                           
+       			 <apex:inputField value="{!locobj.Name}"/>
+                <apex:inputField value="{!locobj.Street__c}"/>
+                          <apex:inputField value="{!locobj.City__c}"/>
+               <apex:inputField value="{!locobj.State__c}"/>
+                  <apex:inputField value="{!locobj.Postal_Code__c}"/>
+                            <apex:inputField value="{!locobj.Landmark__c}"/>
+
+                   </apex:pageBlockSection>
+            
+                  
+                    <!--Event Organiser-->  
+            <apex:pageBlockSection title="Event Organiser" collapsible="true" columns="2">
+                <apex:inputField value="{!esobj.Name}"/>
+                <apex:inputField value="{!esobj.E_mail__c}"/>
+                <apex:inputField value="{!esobj.Alternative_Email__c}"/>
+                <apex:inputField value="{!esobj.Phone__c}"/>
+                  <apex:inputField value="{!esobj.Alternative_Phone__c}"/>
+                  <apex:inputField value="{!esobj.Address__c}"/>
+                 </apex:pageBlockSection>
+            
+              <!--Event Details-->
+           <apex:pageBlockSection title="Event Details" collapsible="true" columns="2">
+                <apex:inputField value="{!ed.Name__c}"/>
+                <apex:inputField value="{!ed.Status__c}"/>
+                <apex:inputField value="{!ed.Organizer__c}"/>
+                <apex:inputField value="{!ed.Start__c}"/>
+                  <apex:inputField value="{!ed.End__c}"/>
+                  <apex:inputField value="{!ed.Max_Seats__c}"/>
+                <apex:inputField value="{!ed.Locations__c}"/>
+                <apex:inputField value="{!ed.Live__c}"/>
+               <apex:inputField value="{!ed.Recurring__c}"/>
+               <apex:inputField value="{!ed.Event_Type__c}"/>
+               <apex:inputField value="{!ed.Frequency__c}"/>               
+               
+               
+               
+            </apex:pageBlockSection>
+            
+            <!--Save command-->
+            <apex:pageBlockButtons >
+             <apex:commandButton action="{!addDetailsEO}" value="Save" />
+            </apex:pageBlockButtons>
+                     
+           
+            
+            
+        </apex:pageBlock>
+            
+    
+    </apex:form>
+    
+</apex:page>

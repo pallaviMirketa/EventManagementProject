@@ -1,0 +1,18 @@
+<apex:page controller="SpeakerRegistrationController" sidebar="false" showHeader="false">
+    <apex:form >
+        <apex:pageBlock >
+            <!--Speaker Details to create new event speaker-->
+            <apex:pageBlockSection title="Speaker Registration" collapsible="true" columns="2">
+                <apex:inputField value="{!speakerob.Name}"/>
+                <apex:inputField value="{!speakerob.E_mail__c}"/>
+                <apex:inputField value="{!speakerob.Phone__c}"/>
+                  <apex:inputField value="{!speakerob.Company__c}"/>
+                  <apex:inputField value="{!espeakerob.Event__c}"/>
+                 </apex:pageBlockSection>
+            <!--Save Details of the event speaker-->
+             <apex:pageBlockButtons >
+             <apex:commandButton action="{!addspeakerDetails}" value="Save" onclick="addspeakerDetails()"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
