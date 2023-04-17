@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recurring_Rule_2</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT( Recurring__c ), NOT( ISPICKVAL( Frequency__c , &apos;&apos;) ))</errorConditionFormula>
+    <errorMessage>You cannot fill the Frequency as this event is occuring for the first time.</errorMessage>
+</ValidationRule>

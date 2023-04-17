@@ -1,0 +1,31 @@
+<apex:page controller="AttendeeRegistrationController" sidebar="false" showHeader="false" >
+    <apex:form >
+       <apex:pageBlock >
+       
+        <apex:pageBlockSection title="Attendee Location" collapsible="true" columns="2" >   
+                     <apex:inputField value="{!locob.Name}"/> 
+                    <apex:inputField value="{!locob.Street__c}"/>
+                          <apex:inputField value="{!locob.City__c}"/>
+               <apex:inputField value="{!locob.State__c}"/>
+                  <apex:inputField value="{!locob.Postal_Code__c}"/>
+                            <apex:inputField value="{!locob.Landmark__c}"/>
+                  <!--apex:inputField value="{!locobj.Verified__c}"/-->
+                  
+           </apex:pageBlockSection>
+           
+           
+           <apex:pageBlockSection title="Attendee Details" collapsible="true" columns="2" >
+            <apex:inputField value="{!attendob.Name}"/>
+                <apex:inputField value="{!attendob.Email__c}"/>
+                <apex:inputField value="{!attendob.Phone__c}"/>
+                  <apex:inputField value="{!attendob.Company_Name__c}"/>
+                  <apex:inputField value="{!eattendob.Event__c}"/>
+                  </apex:pageBlockSection> 
+              
+                        
+           <apex:pageBlockButtons >
+           <apex:commandButton action="{!addAttendeeDetails}" value="Save" onclick="addAttendeeDetails()"/>
+           </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
